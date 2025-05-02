@@ -2,19 +2,34 @@
     include("../db.php");
     session_start();
 
-    echo"Welcome to Admin Panel";
-?>
+    // Redirect if not logged in
+    if (!isset($_SESSION['admin_id'])) {
+        header("Location: login.php");
+        exit();
+    }
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Log Out</title>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin_style.css">
 </head>
+
 <body>
-    <a href="logout.php" class="logout-button">Logout</a>
- 
+
+    <div class="dashboard">
+        <a href="add_bus.php">➕ Add New Bus</a>
+        <a href="view_bus.php">🚌 View All Buses</a>
+        <a href="add_schedule.php">🗓️ Add Schedule</a>
+        <a href="view_bookings.php">📄 View Bookings</a>
+        <a href="logout.php" class="logout-button">🚪 Logout</a>
+    </div>
+
+
 </body>
+
 </html>
