@@ -108,7 +108,7 @@ tr:hover {
 
 
 /* Form container for editing bus */
-.edit-form-container {
+.form-container {
     max-width: 600px;
     margin: 30px auto;
     background: white;
@@ -117,17 +117,18 @@ tr:hover {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Form inputs and labels */
-.edit-form-container label {
+.form-container label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     color: #333;
 }
 
-.edit-form-container input[type="text"],
-.edit-form-container input[type="number"],
-.edit-form-container select {
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container input[type="date"],
+.form-container input[type="time"],
+.form-container select {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -136,8 +137,7 @@ tr:hover {
     font-size: 16px;
 }
 
-/* Submit button */
-.edit-form-container button {
+.form-container button {
     padding: 12px 20px;
     background-color: #007bff;
     color: white;
@@ -147,7 +147,7 @@ tr:hover {
     cursor: pointer;
 }
 
-.edit-form-container button:hover {
+.form-container button:hover {
     background-color: #0056b3;
 }
 
@@ -156,4 +156,12 @@ tr:hover {
     color: #dc3545;
     margin-bottom: 15px;
     font-weight: bold;
+}
+
+/* Fix cramped buttons in view_schedule.php */
+.schedule-actions {
+    display: flex;
+    gap: 12px; /* Adjust spacing as needed */
+    justify-content: flex-start;
+    align-items: center;
 }

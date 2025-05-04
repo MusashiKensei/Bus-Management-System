@@ -25,6 +25,7 @@
         <a href="add_bus.php">➕ Add New Bus</a>
         <a href="view_bus.php">🚌 View All Buses</a>
         <a href="add_schedule.php">🗓️ Add Schedule</a>
+        <a href="view_schedule.php">📅 View Schedule</a>
         <a href="view_bookings.php">📄 View Bookings</a>
         <a href="logout.php" class="logout-button">🚪 Logout</a>
     </div>

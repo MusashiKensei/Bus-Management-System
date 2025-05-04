@@ -60,7 +60,7 @@
         <div class="error"><?= htmlspecialchars($error) ?></div>
     <?php endif; ?>
 
-    <div class="edit-form-container">
+    <div class="form-container">
         <form method="POST" action="">
             <label>Bus Number:</label><br>
             <input type="text" name="bus_number" 
