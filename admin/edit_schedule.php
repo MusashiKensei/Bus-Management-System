@@ -27,9 +27,17 @@
         $departure_date = mysqli_real_escape_string($conn, $_POST['departure_date']);
         $departure_time = mysqli_real_escape_string($conn, $_POST['departure_time']);
         $price_per_seat = mysqli_real_escape_string($conn, $_POST['price_per_seat']);
+        $bus_id = mysqli_real_escape_string($conn, $_POST['bus_id']);
+
+        $check_bus = mysqli_query($conn, "SELECT bus_id FROM bus WHERE bus_id = '$bus_id'");
+        if (mysqli_num_rows($check_bus) == 0) {
+            echo "Invalid bus selected.";
+            exit();
+        }
+
     
         $update_sql = "UPDATE schedule 
-                       SET from_city='$from_city', to_city='$to_city', 
+                       SET bus_id='$bus_id', from_city='$from_city', to_city='$to_city', 
                            departure_date='$departure_date', departure_time='$departure_time', 
                            price_per_seat='$price_per_seat'
                        WHERE schedule_id = $schedule_id";

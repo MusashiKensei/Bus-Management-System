@@ -165,3 +165,72 @@ tr:hover {
     justify-content: flex-start;
     align-items: center;
 }
+
+
+/* Generate seats button in view_schedule.php*/
+.btn {
+    padding: 6px 12px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn-edit {
+    background-color: #4CAF50; /* Green */
+}
+
+.btn-delete {
+    background-color: #f44336; /* Red */
+}
+
+.btn-generate {
+    background-color: #2196F3; /* Blue */
+}
+
+
+/* Dropdown Filter Form */
+.filter-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.filter-form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.filter-form select {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+}
+
+.filter-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filter-form button:hover {
+    background-color: #0056b3;
+}
+
+.inline-label {
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 10px;
+    font-weight: bold;
+}

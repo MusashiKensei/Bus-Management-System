@@ -58,6 +58,9 @@
                                 <a href="delete_schedule.php?schedule_id=<?= 
                                     $row['schedule_id'] ?>" class="action-link delete-link" 
                                     onclick="return confirm('Are you sure you want to delete this schedule?');">Delete</a>
+                                <a class="btn btn-generate" href="generate_seats.php?schedule_id=<?= 
+                                    $row['schedule_id'] ?>">Generate Seats</a>
+
                             </div>
                         </td>
 
