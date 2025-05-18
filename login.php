@@ -28,7 +28,7 @@
         } else {
             // wrong email
             $_SESSION['message'] = "No account found with that email.";
-            header("Location: login.php");
+            header("Location:dashboard.php");
             exit();
         }
     }

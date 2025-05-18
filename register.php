@@ -32,7 +32,7 @@
                 exit();
             } else {
                 $_SESSION['message'] = "Error: " . mysqli_error($conn);
-                header("Location: register.php");
+                header("Location: dashboard.php");
                 exit();
             }
         }
