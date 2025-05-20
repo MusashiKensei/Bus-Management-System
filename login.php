@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = $_POST['password'];
 
-    // Step 1: Check if the email is an admin
+    // Check if the email is an admin
     $admin_sql = "SELECT * FROM admin WHERE email = '$email'";
     $admin_result = mysqli_query($conn, $admin_sql);
 
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // Step 2: Check if the email is a passenger
+    // Check if the email is a passenger
     $user_sql = "SELECT * FROM passengers WHERE email = '$email'";
     $user_result = mysqli_query($conn, $user_sql);
 
