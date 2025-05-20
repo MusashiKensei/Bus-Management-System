@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f8f9fa;
+}
+
+h2 {
+    color: #333;
+}
+
+.dashboard {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.dashboard a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.dashboard a:hover {
+    background-color: #0056b3;
+}
+
+.logout-button {
+    background-color: #dc3545 !important;
+}
+
+.logout-button:hover {
+    background-color: #a71d2a !important;
+}
+
+
+
+/* Table container to center the table and limit width */
+.table-container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Bus list table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e6f0ff;
+}
+
+/* Action links like Edit / Delete */
+.action-link {
+    padding: 6px 12px;
+    margin-right: 5px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    color: white;
+}
+
+.edit-link {
+    background-color: #28a745;
+}
+
+.edit-link:hover {
+    background-color: #1e7e34;
+}
+
+.delete-link {
+    background-color: #dc3545;
+}
+
+.delete-link:hover {
+    background-color: #a71d2a;
+}
+
+
+
+/* Form container for editing bus */
+.form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container input[type="date"],
+.form-container input[type="time"],
+.form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.form-container button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Error message */
+.error {
+    color: #dc3545;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Fix cramped buttons in view_schedule.php */
+.schedule-actions {
+    display: flex;
+    gap: 12px; /* Adjust spacing as needed */
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+/* Generate seats button in view_schedule.php*/
+.btn {
+    padding: 6px 12px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn-edit {
+    background-color: #4CAF50; /* Green */
+}
+
+.btn-delete {
+    background-color: #f44336; /* Red */
+}
+
+.btn-generate {
+    background-color: #2196F3; /* Blue */
+}
+
+
+/* Dropdown Filter Form */
+.filter-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.filter-form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.filter-form select {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+}
+
+.filter-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filter-form button:hover {
+    background-color: #0056b3;
+}
+
+.inline-label {
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 10px;
+    font-weight: bold;
+}

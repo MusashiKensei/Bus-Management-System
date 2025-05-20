@@ -6,7 +6,6 @@
     session_destroy();
 
     //Redirect to login page
-    header("Location: login.php");
+    header("Location: ../login.php");
     exit();
 ?>
-<?php include 'extra/foot.html'; ?>

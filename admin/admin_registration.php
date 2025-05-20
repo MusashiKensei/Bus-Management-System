@@ -64,4 +64,3 @@
 
 </body>
 </html>
-<?php include 'extra/foot.html'; ?>

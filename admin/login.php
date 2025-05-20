@@ -1,6 +1,7 @@
 <?php
     include("../db.php"); 
     session_start();
+    //$_SESSION['admin_id'] = $admin_id_from_database; // assign the actual ID from DB
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = mysqli_real_escape_string($conn, $_POST['email']);
@@ -71,4 +72,3 @@
 </body>
 
 </html>
-<?php include 'extra/foot.html'; ?>

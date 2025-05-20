@@ -43,7 +43,7 @@ try {
             'quantity' => 1,
         ]],
         'customer_email' => $passenger_email,
-        'success_url' => "http://localhost/Bus-Management-System/success.php?session_id={CHECKOUT_SESSION_ID}&schedule_id=$schedule_id&selected_seats=" . urlencode(implode(',', $selected_seats)) . "&total_price_bdt=$total_price_bdt&name=" . urlencode($passenger_name) . "&mobile=" . urlencode($passenger_mobile),
+        'success_url' => "http://localhost/bus_project/success.php?session_id={CHECKOUT_SESSION_ID}&schedule_id=$schedule_id&selected_seats=" . urlencode(implode(',', $selected_seats)) . "&total_price_bdt=$total_price_bdt&name=" . urlencode($passenger_name) . "&mobile=" . urlencode($passenger_mobile),
        
     ]);
 
