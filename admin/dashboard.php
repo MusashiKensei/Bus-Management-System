@@ -4,10 +4,9 @@
 
     // Redirect if not logged in
     if (!isset($_SESSION['admin_id'])) {
-        header("Location: login.php");
+        header("Location: ../login.php"); // Redirect to main login page
         exit();
     }
-
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +30,6 @@
         <a href="view_bookings.php">📄 View Bookings</a>
         <a href="logout.php" class="logout-button">🚪 Logout</a>
     </div>
-
 
 </body>
 
