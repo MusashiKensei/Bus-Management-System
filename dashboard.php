@@ -14,6 +14,10 @@ $query = "SELECT DISTINCT loc_name FROM locations";
 $result_from = mysqli_query($conn, $query);
 $result_to = mysqli_query($conn, $query);
 
+//fetch bus types
+$query_bus = "SELECT DISTINCT bus_type FROM bus";
+$result_bus = mysqli_query($conn, $query_bus);
+
 // Fetch available dates
 $query_dates = "SELECT DISTINCT departure_date FROM schedule";
 $result_date = mysqli_query($conn, $query_dates);
@@ -116,6 +120,18 @@ $dates_json = json_encode($dates);
           <?php endwhile; ?>
         </select>
       </div>
+      <!-- Bus Type -->
+      <div class="form-group">
+            <label for="busType">Bus Type</label>
+            <select name="busType" id="busType" required>
+              <option value="" disabled selected hidden>Select bus type</option>
+              <?php while ($row = mysqli_fetch_assoc($result_bus)) : ?>
+                <option value="<?= $row['bus_type']; ?>" <?= (isset($_GET['busType']) && $_GET['busType'] == $row['bus_type']) ? 'selected' : '' ?>>
+                  <?= $row['bus_type']; ?>
+                </option>
+              <?php endwhile; ?>
+            </select>
+      </div>
 
       <!-- Date -->
       <div class="form-group">
@@ -138,7 +154,7 @@ $dates_json = json_encode($dates);
   flatpickr("#travelDate", {
     dateFormat: "Y-m-d",
     enable: availableDates,
-    defaultDate: availableDates[0] ?? null
+    defaultDate: "<?= $_GET['travelDate'] ?? '' ?>",
   });
 
   // Prevent selecting same city for both dropdowns
@@ -164,20 +180,22 @@ $dates_json = json_encode($dates);
 
 <!-- Search Results (if any) -->
 <?php
-if (isset($_GET['fromLocation'], $_GET['toLocation'], $_GET['travelDate'])):
+if (isset($_GET['fromLocation'], $_GET['toLocation'], $_GET['travelDate'], $_GET['busType'])):
     $from = $_GET['fromLocation'];
     $to = $_GET['toLocation'];
     $date = $_GET['travelDate'];
+    $busType = $_GET['busType'];
 
     $query = "SELECT schedule.*, bus.bus_type 
               FROM schedule
               JOIN bus ON schedule.bus_id = bus.bus_id
               WHERE schedule.from_city = ? 
                 AND schedule.to_city = ? 
-                AND schedule.departure_date = ?";
+                AND schedule.departure_date = ?
+                AND bus.bus_type = ?";
 
     $stmt = mysqli_prepare($conn, $query);
-    mysqli_stmt_bind_param($stmt, "sss", $from, $to, $date);
+    mysqli_stmt_bind_param($stmt, "ssss", $from, $to, $date, $busType);
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
 ?>
