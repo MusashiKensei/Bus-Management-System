@@ -32,7 +32,7 @@ This project allows users to book bus tickets online and enables administrators 
 
 - Manage seat availability and price per seat
 
-#Technologies Used
+# Technologies Used
 
 - PHP (Core PHP)
 
