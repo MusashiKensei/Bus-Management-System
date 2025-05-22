@@ -20,7 +20,7 @@ This project allows users to book bus tickets online and enables administrators 
 
 - View seat layout and book tickets
 
-- View booking history and ticket info
+- Online payment system
 
 ## Admin Panel
 
@@ -41,6 +41,8 @@ This project allows users to book bus tickets online and enables administrators 
 - MySQL (Database)
 
 - HTML/CSS (Frontend)
+
+- JavaScript
 
 - Apache Server (XAMPP or LAMP)
 
