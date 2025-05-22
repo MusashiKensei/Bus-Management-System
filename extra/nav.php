@@ -46,7 +46,7 @@
 <body>
     <nav class="navbar">
         <div class="navdiv">
-            <div class="logo"><a href="#">69travels</a></div>
+            <div class="logo"><a href="#">99travels</a></div>
             <ul>
                 <li><a href=""#">Route</a></li>
                 <li><a href=""#">Branch Location</a></li>
