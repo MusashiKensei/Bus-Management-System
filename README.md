@@ -8,6 +8,8 @@ The Bus-Management-System is a complete web-based bus ticketing platform built u
 
 This project allows users to book bus tickets online and enables administrators to manage buses, schedules, and seat availability.
 
+---
+
 # Features
 
 ## User/Passenger Panel 
@@ -20,8 +22,6 @@ This project allows users to book bus tickets online and enables administrators 
 
 - View booking history and ticket info
 
-# Admin Panel 
-
 ## Admin Panel
 
 - Add/view buses
@@ -31,6 +31,8 @@ This project allows users to book bus tickets online and enables administrators 
 - Automatically generate seats for schedules
 
 - Manage seat availability and price per seat
+
+---
 
 # Technologies Used
 
