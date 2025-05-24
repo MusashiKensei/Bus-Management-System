@@ -44,6 +44,6 @@ This project allows users to book bus tickets online and enables administrators 
 
 - JavaScript
 
-- Apache Server (XAMPP or LAMP)
+- Apache Server (XAMPP)
 
 
