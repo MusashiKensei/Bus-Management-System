@@ -8,6 +8,8 @@ The Bus-Management-System is a complete web-based bus ticketing platform built u
 
 This project allows users to book bus tickets online and enables administrators to manage buses, schedules, and seat availability.
 
+![Bus Management System Screenshot](bus_manage_ER.png)
+
 ---
 
 # Features
